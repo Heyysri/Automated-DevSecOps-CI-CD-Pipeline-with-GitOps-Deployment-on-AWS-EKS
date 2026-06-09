@@ -76,17 +76,16 @@ pipeline {
         }
 
         stage('Push Docker Image') {
-            steps {
-                withDockerRegistry(credentialsId: DOCKER_CREDENTIALS_ID,
-                toolName: 'docker') {
-                    sh """
-                        docker tag ${DOCKER_IMAGE}:${BUILD_NUMBER} \
-                        ${DOCKER_REGISTRY}/${DOCKER_IMAGE}:${BUILD_NUMBER}
-                        docker push ${DOCKER_REGISTRY}/${DOCKER_IMAGE}:${BUILD_NUMBER}
-                    """
-                }
-            }
+    steps {
+        withDockerRegistry(credentialsId: 'docker-cred', url: 'https://index.docker.io/v1/') {
+            sh """
+                docker tag ${DOCKER_IMAGE}:${BUILD_NUMBER} \
+                ${DOCKER_REGISTRY}/${DOCKER_IMAGE}:${BUILD_NUMBER}
+                docker push ${DOCKER_REGISTRY}/${DOCKER_IMAGE}:${BUILD_NUMBER}
+            """
         }
+    }
+}
 
         stage('Update K8s Manifest') {
             steps {
