@@ -312,25 +312,25 @@ Access app: `http://<EXTERNAL-IP>` ✅
 ![Ec2 Instance](screenshots/Ec2-Instance.png)
 
 ## Security Group
-> *(screenshots/security-group.png)*
+![Security-Group](screenshots/security-group.png)
 
 ## Jenkins Pipeline Success
-> *(screenshots/pipeline-success.png)*
+![Pipeline Success](screenshots/pipeline-success.png
 
 ## Jenkins Console logs Success
-> *(screenshots/Logs-success.png)*
+![Logs Success](screenshots/Logs-success.png)
 
 ## SonarQube Quality Gate Passed
-> *(screenshots/Quality-gate.png)*
+![Quality Gate](screenshots/Quality-gate.png)
 
 ## DockerHub Image Pushed
-> *(screenshots/Image-Push.png)*
+![Image Push](screenshots/Image-Push.png)
 
 ## Argo CD Synced & Healthy
-> *(screenshots/argo-cd.png)*
+![Argo-CD](screenshots/argo-cd.png)
 
 ## Live Application
-> *(screenshots/Live-application.png)*
+![Live Application](screenshots/Live-application.png)
 
 ---
 
